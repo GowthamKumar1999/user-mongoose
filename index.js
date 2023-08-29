@@ -17,7 +17,7 @@ app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
 app.use(Auth);
 mongoose.connect(
-  `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0-shard-00-00.ogjsn.mongodb.net:27017,cluster0-shard-00-01.ogjsn.mongodb.net:27017,cluster0-shard-00-02.ogjsn.mongodb.net:27017/edtechClass?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority`
+  `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.gewbjsb.mongodb.net/`
 );
 
 app.use("/users",userRouter); // http://localhost:4000/users/login
